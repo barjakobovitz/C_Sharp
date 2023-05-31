@@ -12,17 +12,17 @@ namespace Ex03.GarageLogic
         float CurrentAirPressure;
         float MaxAirPressure;
 
-        internal Wheel(string i_manufacturerName, float i_currentAirPressure, float i_maxAirPressure)
+        internal Wheel(string i_ManufacturerName, float i_CurrentAirPressure, float i_MaxAirPressure)
         {
-            ManufacturerName = i_manufacturerName;
-            CurrentAirPressure = i_currentAirPressure;
-            MaxAirPressure = i_maxAirPressure;
+            ManufacturerName = i_ManufacturerName;
+            CurrentAirPressure = i_CurrentAirPressure;
+            MaxAirPressure = i_MaxAirPressure;
         }
-        internal void InflateAction(float i_airToAdd)
+        internal void InflateAction(float i_AirToAdd)
         {
-          if (i_airToAdd+CurrentAirPressure<MaxAirPressure)
+          if (i_AirToAdd+CurrentAirPressure<MaxAirPressure)
             {
-                CurrentAirPressure += i_airToAdd;
+                CurrentAirPressure += i_AirToAdd;
             }
         }
 
