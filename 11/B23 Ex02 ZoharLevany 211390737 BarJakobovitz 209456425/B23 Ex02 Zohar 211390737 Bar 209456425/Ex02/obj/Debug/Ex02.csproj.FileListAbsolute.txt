@@ -1,0 +1,9 @@
+C:\Users\Zvika\C_SHARP\11\B23 Ex02 ZoharLevany 211390737 BarJakobovitz 209456425\B23 Ex02 Zohar 211390737 Bar 209456425\Ex02\obj\Debug\Ex02.csproj.AssemblyReference.cache
+C:\Users\Zvika\C_SHARP\11\B23 Ex02 ZoharLevany 211390737 BarJakobovitz 209456425\B23 Ex02 Zohar 211390737 Bar 209456425\Ex02\obj\Debug\Ex02.csproj.CoreCompileInputs.cache
+C:\Users\Zvika\C_SHARP\11\B23 Ex02 ZoharLevany 211390737 BarJakobovitz 209456425\B23 Ex02 Zohar 211390737 Bar 209456425\Ex02\bin\Debug\Ex02.exe.config
+C:\Users\Zvika\C_SHARP\11\B23 Ex02 ZoharLevany 211390737 BarJakobovitz 209456425\B23 Ex02 Zohar 211390737 Bar 209456425\Ex02\bin\Debug\Ex02.exe
+C:\Users\Zvika\C_SHARP\11\B23 Ex02 ZoharLevany 211390737 BarJakobovitz 209456425\B23 Ex02 Zohar 211390737 Bar 209456425\Ex02\bin\Debug\Ex02.pdb
+C:\Users\Zvika\C_SHARP\11\B23 Ex02 ZoharLevany 211390737 BarJakobovitz 209456425\B23 Ex02 Zohar 211390737 Bar 209456425\Ex02\bin\Debug\Ex02.ConsoleUtils.dll
+C:\Users\Zvika\C_SHARP\11\B23 Ex02 ZoharLevany 211390737 BarJakobovitz 209456425\B23 Ex02 Zohar 211390737 Bar 209456425\Ex02\obj\Debug\Ex02.csproj.CopyComplete
+C:\Users\Zvika\C_SHARP\11\B23 Ex02 ZoharLevany 211390737 BarJakobovitz 209456425\B23 Ex02 Zohar 211390737 Bar 209456425\Ex02\obj\Debug\Ex02.exe
+C:\Users\Zvika\C_SHARP\11\B23 Ex02 ZoharLevany 211390737 BarJakobovitz 209456425\B23 Ex02 Zohar 211390737 Bar 209456425\Ex02\obj\Debug\Ex02.pdb
