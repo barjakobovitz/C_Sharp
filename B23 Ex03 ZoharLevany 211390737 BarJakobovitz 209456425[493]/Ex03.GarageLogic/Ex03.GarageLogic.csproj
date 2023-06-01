@@ -39,6 +39,9 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FuelEngine.cs" />
+    <Compile Include="ElectricEngine.cs" />
+    <Compile Include="xEngine.cs" />
     <Compile Include="eFuelType.cs" />
     <Compile Include="Engine.cs" />
     <Compile Include="Wheel.cs" />
