@@ -8,17 +8,43 @@ namespace Ex03.GarageLogic
 {
     internal class VehicleInGarage
     {
-        private readonly Vehicle r_vehicle;
+        private readonly Vehicle r_Vehicle;
         private readonly String r_OwnerName;
         private readonly String r_OwnerPhoneNumber;
         private eVehicleStatus m_VehicleStatus;
 
-        public VehicleInGarage(Vehicle i_Vehicle, string i_OwnerName, string i_OwnerPhoneNumber, eVehicleStatus i_VehicleStatus)
+        internal VehicleInGarage(Vehicle i_Vehicle, string i_OwnerName, string i_OwnerPhoneNumber, eVehicleStatus i_VehicleStatus)
         {
-            r_vehicle = i_Vehicle;
+            r_Vehicle = i_Vehicle;
             r_OwnerName = i_OwnerName;
             r_OwnerPhoneNumber = i_OwnerPhoneNumber;
             m_VehicleStatus = i_VehicleStatus;
         }
+
+ 
+        public eVehicleStatus VehicleStatus
+        {
+            get
+            {
+                return m_VehicleStatus;
+            }
+
+            set
+            {
+                m_VehicleStatus = value;
+            }
+
+        }
+        public Vehicle Vehicle
+        {
+            get
+            {
+                return r_Vehicle;
+            }
+
+        }
+
+
+
     }
 }
