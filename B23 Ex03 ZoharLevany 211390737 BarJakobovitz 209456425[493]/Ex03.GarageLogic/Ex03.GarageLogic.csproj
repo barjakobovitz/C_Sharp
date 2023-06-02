@@ -39,6 +39,13 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Car.cs" />
+    <Compile Include="eVehicle.cs" />
+    <Compile Include="eCarColor.cs" />
+    <Compile Include="eLicenseType.cs" />
+    <Compile Include="eNumberOfDoors.cs" />
+    <Compile Include="Motorcycle.cs" />
+    <Compile Include="Truck.cs" />
     <Compile Include="ElectricVehicle.cs" />
     <Compile Include="FuelBasedVehicle.cs" />
     <Compile Include="eVehicleStatus.cs" />

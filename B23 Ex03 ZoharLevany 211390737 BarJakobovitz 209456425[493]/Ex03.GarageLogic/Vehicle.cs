@@ -20,6 +20,22 @@ namespace Ex03.GarageLogic
             m_Wheels = new List<Wheel>();
         }
 
+        internal abstract String GetEnergyInfo();
+
+        internal abstract String GetTypeOfVehicleInfo();
+
+        internal String GetWheelsInfo()
+        {
+            StringBuilder WheelsInfo = new StringBuilder();
+            foreach(Wheel wheel in m_Wheels)
+            {
+                WheelsInfo.AppendLine(wheel.ToString());
+            }
+            return WheelsInfo.ToString();
+        }
+
+
+
         internal string Model
         {
             get
@@ -44,5 +60,9 @@ namespace Ex03.GarageLogic
             }
         }
 
+        public override string ToString()
+        {
+            return $"ModelName: {r_ModelName}\nLicenseNumber: {r_LicenseNumber}";
+        }
     }
 }

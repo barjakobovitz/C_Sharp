@@ -9,13 +9,42 @@ namespace Ex03.GarageLogic
     internal class Garage
     {
         private readonly Dictionary<string, VehicleInGarage> r_DictionryOfVehiclesInGarage = new Dictionary<string, VehicleInGarage> { };
+        
 
 
-        internal void AddVehicleToGarage(string i_LicenseNumber)
+        internal void AddVehicleToGarage(string i_LicenseNumber, eVehicle i_vehicle)
         {
             if (r_DictionryOfVehiclesInGarage.ContainsKey(i_LicenseNumber))
             {
                 r_DictionryOfVehiclesInGarage[i_LicenseNumber].VehicleStatus = eVehicleStatus.InRepair;
+            }
+            else
+            {
+                Vehicle newVehicle;
+                VehicleInGarage newVehicleInGarage;
+
+                switch (i_vehicle)
+                {
+                    case eVehicle.ElectricMotorcycle:
+                        newVehicle = new ElectricMotorcycle();
+                        break;
+                    case eVehicle.ElectricCar:
+                        newVehicle = new ElectricCar();
+                        break;
+                    case eVehicle.FuelBasedMotorcycle:
+                        newVehicle = new FuelBasedMotorcycle();
+                        break;
+                    case eVehicle.FuelBasedCar:
+                        newVehicle = new FuelBasedCar();
+                        break;
+                    case eVehicle.FuelBasedTrack:
+                        newVehicle = new FuelBasedTrack();
+                        break;
+                }
+
+                newVehicleInGarage = new VehicleInGarage(newVehicle, i_OwnerName, i_OwnerPhoneNumber, eVehicleStatus.InRepair);
+                r_DictionryOfVehiclesInGarage[i_LicenseNumber]= newVehicleInGarage;
+
             }
         }
 
@@ -69,6 +98,10 @@ namespace Ex03.GarageLogic
             {
                 electricVehicle.Recharging(i_MinutesToCharge);
             }
+        }
+        internal string VehicleInformation(string i_LicenseNumber)
+        {
+            return r_DictionryOfVehiclesInGarage[i_LicenseNumber].ToString();
         }
 
     }

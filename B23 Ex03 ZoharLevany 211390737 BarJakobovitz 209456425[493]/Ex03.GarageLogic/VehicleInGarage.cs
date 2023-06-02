@@ -22,7 +22,7 @@ namespace Ex03.GarageLogic
         }
 
  
-        public eVehicleStatus VehicleStatus
+        internal eVehicleStatus VehicleStatus
         {
             get
             {
@@ -35,7 +35,7 @@ namespace Ex03.GarageLogic
             }
 
         }
-        public Vehicle Vehicle
+        internal Vehicle Vehicle
         {
             get
             {
@@ -43,6 +43,16 @@ namespace Ex03.GarageLogic
             }
 
         }
+        internal string GetVehicleInfo()
+        {
+            StringBuilder VehicleInfo = new StringBuilder();
+            VehicleInfo.AppendLine(Vehicle.ToString());
+            VehicleInfo.AppendLine($"OwnerName: {r_OwnerName}\nVehicleStatus: {m_VehicleStatus}");
+            VehicleInfo.AppendLine(Vehicle.GetEnergyInfo());
+            VehicleInfo.AppendLine(Vehicle.GetTypeOfVehicleInfo());
+            return VehicleInfo.ToString();
+        }
+
 
 
 
