@@ -41,5 +41,9 @@ namespace Ex03.GarageLogic
                 }
             }
         }
+        internal override String GetEnergyInfo()
+        {
+            return $"Current Amount Of Fuel: {m_CurrentAmountOfFuel}\nFuel Type: {r_FuelType}";
+        }
     }
 }

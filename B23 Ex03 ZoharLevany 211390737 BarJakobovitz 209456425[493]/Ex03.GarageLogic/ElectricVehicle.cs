@@ -28,7 +28,17 @@ namespace Ex03.GarageLogic
                 m_RemainingTimeOfEngineOperation = value;
             }
         }
-        internal void Recharging(float i_MinutesToCharge) { }
+        internal void Recharging(float i_MinutesToCharge) 
+        { 
+            if (i_MinutesToCharge+m_RemainingEnergyPercentage<r_MaxTimeOfEngineOperation)
+            {
+                m_RemainingEnergyPercentage = i_MinutesToCharge + m_RemainingEnergyPercentage;
+            }
+        }
+        internal override String GetEnergyInfo()
+        {
+            return $"Remaining Time Of Engine Operation: {m_RemainingTimeOfEngineOperation}\n";
+        }
     }
     
 }

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Ex03.GarageLogic
 {
-    internal enum eNumberOfDoors
+    internal enum eNumberOfDors
     {
         Two = 2,
         Three = 3,

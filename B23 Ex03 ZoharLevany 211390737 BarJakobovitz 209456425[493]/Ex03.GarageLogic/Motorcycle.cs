@@ -16,5 +16,9 @@ namespace Ex03.GarageLogic
             r_LicenseType = i_LicenseType;
             r_EngineVolume = i_Volume;
         }
+        internal string InfoAboutMotorcycle()
+        {
+            return $"License Type: {r_LicenseType}\nEngine Volume: {r_EngineVolume}";
+        }
     }
 }

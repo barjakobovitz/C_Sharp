@@ -47,7 +47,7 @@ namespace Ex03.GarageLogic
         {
             StringBuilder VehicleInfo = new StringBuilder();
             VehicleInfo.AppendLine(Vehicle.ToString());
-            VehicleInfo.AppendLine($"OwnerName: {r_OwnerName}\nVehicleStatus: {m_VehicleStatus}");
+            VehicleInfo.AppendLine($"Owner Name: {r_OwnerName}\nVehicle Status: {m_VehicleStatus}");
             VehicleInfo.AppendLine(Vehicle.GetEnergyInfo());
             VehicleInfo.AppendLine(Vehicle.GetTypeOfVehicleInfo());
             return VehicleInfo.ToString();

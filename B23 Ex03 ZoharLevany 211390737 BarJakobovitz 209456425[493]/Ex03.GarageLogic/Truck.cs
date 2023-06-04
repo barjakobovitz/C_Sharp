@@ -29,5 +29,9 @@ namespace Ex03.GarageLogic
                 m_DoesItContainDengerousMaterials = value;
             }
         }
+        internal string InfoAboutTruck()
+        {
+            return $"Does It Contain Dengerous Materials: {m_DoesItContainDengerousMaterials}\nCargo Tank Volume: {r_CargoTankVolume}";
+        }
     }
 }

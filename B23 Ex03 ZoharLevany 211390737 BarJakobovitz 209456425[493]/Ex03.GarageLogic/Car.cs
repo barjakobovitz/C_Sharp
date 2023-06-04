@@ -32,5 +32,10 @@ namespace Ex03.GarageLogic
                 return r_NumberOfDors;
             }
         }
+
+        internal string InfoAboutCar()
+        {
+            return $"Car Color: {r_CarColor}\nNumber Of Doors: {r_NumberOfDors}";
+        }
     }
 }
