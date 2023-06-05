@@ -9,10 +9,11 @@ namespace Ex03.GarageLogic
     internal class ElectricCar : ElectricVehicle
     {
         private readonly Car r_Car;
-        internal ElectricCar(string i_ModelName, string i_LicenseNumber, float i_RemainingTimeOfEngineOperation, eCarColor i_Color, eNumberOfDors i_NumberOfDors, string[] i_ManufacturersOfWheelsName, float[] i_CurrentAirPressureOfTheWheels) : base(i_ModelName, i_LicenseNumber, i_RemainingTimeOfEngineOperation)
+        private const float k_MaxTimeOfEngineOperation= 5.2f;
+        internal ElectricCar(string i_ModelName, string i_LicenseNumber, float i_RemainingTimeOfEngineOperation, eCarColor i_Color, eNumberOfDors i_NumberOfDors, string[] i_ManufacturersOfWheelsName, float[] i_CurrentAirPressureOfTheWheels) : base(i_ModelName, i_LicenseNumber, i_RemainingTimeOfEngineOperation, k_MaxTimeOfEngineOperation)
         {
             r_Car = new Car(i_Color, i_NumberOfDors);
-            m_MaxTimeOfEngineOperation = (float)5.2;
+            
 
             for (int i = 0; i < i_ManufacturersOfWheelsName.Length; i++)
             {

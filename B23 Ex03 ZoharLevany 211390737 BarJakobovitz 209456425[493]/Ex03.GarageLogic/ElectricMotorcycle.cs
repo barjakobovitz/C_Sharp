@@ -9,11 +9,12 @@ namespace Ex03.GarageLogic
     internal class ElectricMotorcycle : ElectricVehicle
     {
         private readonly Motorcycle r_Motorcycle;
+        private const float k_MaxTimeOfEngineOperation = 2.6f;
 
-        internal ElectricMotorcycle(string i_ModeName, string i_LicenseNumber, float i_RemainingTimeOfEngineOperation, eLicenseType i_LicenseType, int i_EngainVolume, string[] i_ManufacturersOfWheelsName, float[] i_CurrentAirPressureOfTheWheels) : base(i_ModeName, i_LicenseNumber, i_RemainingTimeOfEngineOperation)
+        internal ElectricMotorcycle(string i_ModeName, string i_LicenseNumber, float i_RemainingTimeOfEngineOperation, eLicenseType i_LicenseType, int i_EngainVolume, string[] i_ManufacturersOfWheelsName, float[] i_CurrentAirPressureOfTheWheels) : base(i_ModeName, i_LicenseNumber, i_RemainingTimeOfEngineOperation, k_MaxTimeOfEngineOperation)
         {
             r_Motorcycle = new Motorcycle(i_LicenseType, i_EngainVolume);
-            m_MaxTimeOfEngineOperation = (float)2.6;
+            
 
             for (int i = 0; i < i_ManufacturersOfWheelsName.Length; i++)
             {
@@ -39,7 +40,7 @@ namespace Ex03.GarageLogic
 
         internal override String GetTypeOfVehicleInfo()
         {
-            r_Motorcycle.InfoAboutMotorcycle();
+            return r_Motorcycle.InfoAboutMotorcycle();
         }
     }
 }

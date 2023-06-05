@@ -9,12 +9,14 @@ namespace Ex03.GarageLogic
     internal class FuelTruck : FuelBasedVehicle
     {
         private readonly Truck r_Truck;
+        private const float k_MaxAmountOfFuel = 135;
+        private const eFuelType k_FuelType = eFuelType.Soler;
 
-        internal FuelTruck(string i_ModeName, string i_LicenseNumber, float i_CurrentAmountOfFuel, bool i_DoesItContainDengerousMaterials, float i_CargoTankVolume, string[] i_ManufacturersOfWheelsName, float[] i_CurrentAirPressureOfTheWheels) : base(i_ModeName, i_LicenseNumber, i_CurrentAmountOfFuel)
+
+        internal FuelTruck(string i_ModeName, string i_LicenseNumber, float i_CurrentAmountOfFuel, bool i_DoesItContainDengerousMaterials, float i_CargoTankVolume, string[] i_ManufacturersOfWheelsName, float[] i_CurrentAirPressureOfTheWheels) : base(i_ModeName, i_LicenseNumber, i_CurrentAmountOfFuel,k_MaxAmountOfFuel,k_FuelType)
         {
             r_Truck = new Truck(i_DoesItContainDengerousMaterials, i_CargoTankVolume);
-            m_MaxAmountOfFuel = 135;
-            m_FuelType = eFuelType.Soler;
+            
 
             for (int i = 0; i < i_ManufacturersOfWheelsName.Length; i++)
             {

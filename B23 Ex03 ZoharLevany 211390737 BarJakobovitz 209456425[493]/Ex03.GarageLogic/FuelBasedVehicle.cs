@@ -10,12 +10,15 @@ namespace Ex03.GarageLogic
     {
         protected readonly eFuelType r_FuelType;
         private float m_CurrentAmountOfFuel;
-        protected readonly float m_MaxAmountOfFuel;
+        protected readonly float r_MaxAmountOfFuel;
+       
 
-        internal FuelBasedVehicle(string i_ModeName, string i_LicenseNumber, float i_CurrentAmountOfFuel) : base(i_ModeName, i_LicenseNumber)
+        internal FuelBasedVehicle(string i_ModeName, string i_LicenseNumber, float i_CurrentAmountOfFuel, float i_MaxAmountOfFuel, eFuelType i_FuelType) : base(i_ModeName, i_LicenseNumber)
         {
             m_CurrentAmountOfFuel = i_CurrentAmountOfFuel;
-        }
+            r_FuelType=i_FuelType;
+            r_MaxAmountOfFuel= i_MaxAmountOfFuel;
+    }
 
         internal float CurrentAmountOfFuel
         {
@@ -33,11 +36,18 @@ namespace Ex03.GarageLogic
 
         internal void Refueling(float i_FuelToAdd, eFuelType i_FuelType)
         {
+            string message;
             if (i_FuelType == r_FuelType)
             {
-                if ((m_CurrentAmountOfFuel + i_FuelToAdd) < m_MaxAmountOfFuel)
+                if ((m_CurrentAmountOfFuel + i_FuelToAdd) < r_MaxAmountOfFuel)
                 {
                     m_CurrentAmountOfFuel += i_FuelToAdd;
+                }
+
+                else
+                {
+                    message = $"Out of range, current amount of fuel: {m_CurrentAmountOfFuel}, max amount of fuel: {r_MaxAmountOfFuel}";
+                    throw new ValueOutOfRangeException(message, r_MaxAmountOfFuel, 0);
                 }
             }
         }

@@ -9,10 +9,18 @@ namespace Ex03.GarageLogic
     internal class Garage
     {
         private readonly Dictionary<string, VehicleInGarage> r_DictionryOfVehiclesInGarage = new Dictionary<string, VehicleInGarage> { };
-        
+        private List<eVehicle> m_ListOfVehiclesThatCanBeHandled = new List<eVehicle>();
 
 
-        internal void AddVehicleToGarage(string i_LicenseNumber, eVehicle i_vehicle)
+        public Garage()
+        {
+            foreach (eVehicle vehicle in eVehicle.GetValues(typeof(eVehicle)))
+            {
+                m_ListOfVehiclesThatCanBeHandled.Append(vehicle);
+            }
+        }
+
+        internal void AddVehicleToGarage(string i_LicenseNumber, VehicleInGarage i_VehicleInGarage)
         {
             if (r_DictionryOfVehiclesInGarage.ContainsKey(i_LicenseNumber))
             {
@@ -20,31 +28,7 @@ namespace Ex03.GarageLogic
             }
             else
             {
-                Vehicle newVehicle;
-                VehicleInGarage newVehicleInGarage;
-
-                switch (i_vehicle)
-                {
-                    case eVehicle.ElectricMotorcycle:
-                        newVehicle = new ElectricMotorcycle();
-                        break;
-                    case eVehicle.ElectricCar:
-                        newVehicle = new ElectricCar();
-                        break;
-                    case eVehicle.FuelBasedMotorcycle:
-                        newVehicle = new FuelBasedMotorcycle();
-                        break;
-                    case eVehicle.FuelBasedCar:
-                        newVehicle = new FuelBasedCar();
-                        break;
-                    case eVehicle.FuelBasedTrack:
-                        newVehicle = new FuelBasedTrack();
-                        break;
-                }
-
-                newVehicleInGarage = new VehicleInGarage(newVehicle, i_OwnerName, i_OwnerPhoneNumber, eVehicleStatus.InRepair);
-                r_DictionryOfVehiclesInGarage[i_LicenseNumber]= newVehicleInGarage;
-
+                r_DictionryOfVehiclesInGarage.Add(i_LicenseNumber, i_VehicleInGarage);
             }
         }
 
@@ -94,9 +78,10 @@ namespace Ex03.GarageLogic
 
         internal void Recharging(String i_LicenseNumber, float i_MinutesToCharge)
         {
+            float hoursToCharge = 60 * i_MinutesToCharge;
             if (r_DictionryOfVehiclesInGarage[i_LicenseNumber].Vehicle is ElectricVehicle electricVehicle)
             {
-                electricVehicle.Recharging(i_MinutesToCharge);
+                electricVehicle.Recharging(hoursToCharge);
             }
         }
         internal string VehicleInformation(string i_LicenseNumber)

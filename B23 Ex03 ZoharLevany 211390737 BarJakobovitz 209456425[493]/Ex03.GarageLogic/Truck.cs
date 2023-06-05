@@ -17,6 +17,15 @@ namespace Ex03.GarageLogic
             r_CargoTankVolume = i_Volume;
         }
 
+        internal float CargoTankVolume
+        {
+            get
+            {
+                return r_CargoTankVolume;
+            }
+
+        }
+
         internal bool DoesItContainDengerousMaterials
         {
             get
