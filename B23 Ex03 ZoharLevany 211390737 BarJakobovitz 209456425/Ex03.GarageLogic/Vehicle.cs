@@ -10,6 +10,7 @@ namespace Ex03.GarageLogic
     {
         private readonly string r_ModelName;
         private readonly string r_LicenseNumber;
+        internal float m_RemainingEnergyPercentage=0;
         protected List<Wheel> m_Wheels;
         protected float m_MaxAirPressure;
 

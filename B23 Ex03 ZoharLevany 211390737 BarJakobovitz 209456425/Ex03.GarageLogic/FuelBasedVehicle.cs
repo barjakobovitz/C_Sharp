@@ -10,7 +10,6 @@ namespace Ex03.GarageLogic
     {
 
         protected eFuelType m_FuelType;
-        private float m_CurrentAmountOfFuel=0;
         protected float m_MaxAmountOfFuel;
 
 
@@ -21,13 +20,13 @@ namespace Ex03.GarageLogic
         {
             get
             {
-                return m_CurrentAmountOfFuel;
+                return m_RemainingEnergyPercentage;
             }
 
 
             set
             {
-                m_CurrentAmountOfFuel = value;
+                m_RemainingEnergyPercentage = value;
             }
         }
 
@@ -36,14 +35,14 @@ namespace Ex03.GarageLogic
             string message;
             if (i_FuelType == m_FuelType)
             {
-                if ((m_CurrentAmountOfFuel + i_FuelToAdd) < m_MaxAmountOfFuel)
+                if ((m_RemainingEnergyPercentage + i_FuelToAdd) < m_MaxAmountOfFuel)
                 {
-                    m_CurrentAmountOfFuel += i_FuelToAdd;
+                    m_RemainingEnergyPercentage += i_FuelToAdd;
                 }
 
                 else
                 {
-                    message = $"Out of range, current amount of fuel: {m_CurrentAmountOfFuel}, max amount of fuel: {m_MaxAmountOfFuel}";
+                    message = $"Out of range, current amount of fuel: {m_RemainingEnergyPercentage}, max amount of fuel: {m_MaxAmountOfFuel}";
                     throw new ValueOutOfRangeException(message, m_MaxAmountOfFuel, 0);
                 }
             }
@@ -55,7 +54,7 @@ namespace Ex03.GarageLogic
         }
         public override string ToString()
         {
-            string fuelInfo = $"Current Amount Of Fuel: {m_CurrentAmountOfFuel}\nFuel Type: {m_FuelType}";
+            string fuelInfo = $"Current Amount Of Fuel: {m_RemainingEnergyPercentage}\nFuel Type: {m_FuelType}";
             return $"{base.ToString()}{fuelInfo}";
         }
     }

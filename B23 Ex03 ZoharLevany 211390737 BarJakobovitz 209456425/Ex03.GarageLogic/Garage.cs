@@ -9,14 +9,14 @@ namespace Ex03.GarageLogic
     public class Garage
     {
         private readonly Dictionary<string, VehicleInGarage> r_DictionryOfVehiclesInGarage = new Dictionary<string, VehicleInGarage> { };
-        private List<eVehicle> m_ListOfVehiclesThatCanBeHandled = new List<eVehicle>();
+        private List<eRepairableCarType> m_ListOfVehiclesThatCanBeHandled = new List<eRepairableCarType>();
 
 
         public Garage()
         {
-            foreach (eVehicle vehicle in eVehicle.GetValues(typeof(eVehicle)))
+            foreach (eRepairableCarType repairableCarType in eRepairableCarType.GetValues(typeof(eRepairableCarType)))
             {
-                m_ListOfVehiclesThatCanBeHandled.Append(vehicle);
+                m_ListOfVehiclesThatCanBeHandled.Append(repairableCarType);
             }
         }
 
@@ -64,7 +64,7 @@ namespace Ex03.GarageLogic
         {
             foreach (Wheel wheel in r_DictionryOfVehiclesInGarage[i_LicenseNumber].Vehicle.Wheels)
             {
-                wheel.CurrentAirPressure = wheel.MaxAirPressure;
+                wheel.InflateAction(wheel.MaxAirPressure-wheel.CurrentAirPressure);
             }
         }
 

@@ -16,6 +16,10 @@ namespace Ex03.GarageLogic
         internal Wheel(string i_ManufacturerName, float i_CurrentAirPressure, float i_MaxAirPressure)
         {
             r_ManufacturerName = i_ManufacturerName;
+            if (i_CurrentAirPressure > i_MaxAirPressure)
+            {
+                throw new ValueOutOfRangeException($"Out of range, Current Air Pressure: {i_CurrentAirPressure}, max air pressure: {i_MaxAirPressure}", r_MaxAirPressure, 0);
+            }
             m_CurrentAirPressure = i_CurrentAirPressure;
             r_MaxAirPressure = i_MaxAirPressure;
             
@@ -26,7 +30,7 @@ namespace Ex03.GarageLogic
         {
           string message;
 
-          if (i_AirToAdd+ m_CurrentAirPressure <= r_MaxAirPressure)
+          if ((i_AirToAdd+ m_CurrentAirPressure) <= r_MaxAirPressure)
             {
                 m_CurrentAirPressure += i_AirToAdd;
             }
@@ -52,10 +56,6 @@ namespace Ex03.GarageLogic
                 return m_CurrentAirPressure;
             }
 
-            set
-            {
-                m_CurrentAirPressure = value;
-            }
         }
 
         internal float MaxAirPressure

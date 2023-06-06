@@ -8,7 +8,6 @@ namespace Ex03.GarageLogic
 {
     internal class ElectricVehicle : Vehicle
     {
-        private float m_RemainingTimeOfEngineOperation = 0;
         protected float m_MaxTimeOfEngineOperation;
         
 
@@ -20,32 +19,32 @@ namespace Ex03.GarageLogic
         {
             get
             {
-                return m_RemainingTimeOfEngineOperation;
+                return m_RemainingEnergyPercentage;
             }
 
             set
             {
-                m_RemainingTimeOfEngineOperation = value;
+                m_RemainingEnergyPercentage = value;
             }
         }
         internal void Recharging(float i_HoursToCharge) 
         {
             
             string message;
-            if ((i_HoursToCharge+ m_RemainingTimeOfEngineOperation) <m_MaxTimeOfEngineOperation)
+            if ((i_HoursToCharge+ m_RemainingEnergyPercentage) <m_MaxTimeOfEngineOperation)
             {
-                m_RemainingTimeOfEngineOperation += i_HoursToCharge ;   
+                m_RemainingEnergyPercentage += i_HoursToCharge ;   
             }
             else
             {
-                message = $"Out of range, remaining time of engine operation: {m_RemainingTimeOfEngineOperation}, max time of engine operation: {m_MaxTimeOfEngineOperation}";
+                message = $"Out of range, remaining time of engine operation: {m_RemainingEnergyPercentage}, max time of engine operation: {m_MaxTimeOfEngineOperation}";
                 throw new ValueOutOfRangeException(message, m_MaxTimeOfEngineOperation, 0);
             }
 
         }
         public override string ToString()
         {
-            string electricityInfo= $"Remaining Time Of Engine Operation: {m_RemainingTimeOfEngineOperation}";
+            string electricityInfo= $"Remaining Time Of Engine Operation: {m_RemainingEnergyPercentage}";
             return $"{base.ToString()}{electricityInfo}";
         }
     }

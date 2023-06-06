@@ -76,7 +76,7 @@ namespace Ex03.ConsoleUI
 
         internal void AddVehicleToGarage()
         {
-            GarageLogic.eVehicle vehicle;
+            GarageLogic.eRepairableCarType repairableCarType;
             GarageLogic.VehicleInGarage vehicleInGarage;
             string OwnerName;
             string OwnerPhoneNumber;
@@ -102,31 +102,31 @@ namespace Ex03.ConsoleUI
                 Console.WriteLine("4-fuel Based car");
                 Console.WriteLine("5-fuel Based truck");
                 Console.WriteLine("Please choose a number");
-                vehicle = (GarageLogic.eVehicle)int.Parse(Console.ReadLine());
-                vehicleInGarage = GarageLogic.VehicleCreator.CreateVehicleInGrage(vehicle, OwnerName, OwnerPhoneNumber, ModelName, LicenseNumber);
+                repairableCarType = (GarageLogic.eRepairableCarType)int.Parse(Console.ReadLine());
+                vehicleInGarage = GarageLogic.VehicleCreator.CreateVehicleInGrage(repairableCarType, OwnerName, OwnerPhoneNumber, ModelName, LicenseNumber);
                 IsTheVehicleInTheGarage = r_Garage.IsTheVehicleInTheGarage(LicenseNumber);
                 r_Garage.AddVehicleToGarage(LicenseNumber, vehicleInGarage);
                 if (!IsTheVehicleInTheGarage)
                 {
-                    switch (vehicle)
+                    switch (repairableCarType)
                     {
-                        case GarageLogic.eVehicle.ElectricMotorcycle:
+                        case GarageLogic.eRepairableCarType.ElectricMotorcycle:
                             AddMotorcycleToGarage(LicenseNumber);
                             ElectrictyModeSetting(LicenseNumber);
                             break;
-                        case GarageLogic.eVehicle.ElectricCar:
+                        case GarageLogic.eRepairableCarType.ElectricCar:
                             AddCarToGarage(LicenseNumber);
                             ElectrictyModeSetting(LicenseNumber);
                             break;
-                        case GarageLogic.eVehicle.FuelBasedCar:
+                        case GarageLogic.eRepairableCarType.FuelBasedCar:
                             AddCarToGarage(LicenseNumber);
                             FuelModeSetting(LicenseNumber,GarageLogic.eFuelType.Octan95); 
                             break;
-                        case GarageLogic.eVehicle.FuelBasedMotorcycle:
+                        case GarageLogic.eRepairableCarType.FuelBasedMotorcycle:
                             AddMotorcycleToGarage(LicenseNumber);
                             FuelModeSetting(LicenseNumber,GarageLogic.eFuelType.Octan98); 
                             break;
-                        case GarageLogic.eVehicle.FuelBasedTrack:
+                        case GarageLogic.eRepairableCarType.FuelBasedTrack:
                             AddTruckToGarage(LicenseNumber);
                             FuelModeSetting(LicenseNumber, GarageLogic.eFuelType.Soler);
                             break;
@@ -166,11 +166,9 @@ namespace Ex03.ConsoleUI
             catch (Exception exception)
             {
                 Console.WriteLine("It didn't work, please try again.\nError message:" + exception.Message);
-                Console.WriteLine("If you want to try again, enter 0 and anything else to back to the manu");
-                if (Console.ReadLine()=="0")
-                {
-                    AddMotorcycleToGarage(i_LicenseNumber);
-                }
+                AddMotorcycleToGarage(i_LicenseNumber);
+               
+
                 
             }
         }
@@ -200,11 +198,7 @@ namespace Ex03.ConsoleUI
             catch (Exception exception)
             {
                 Console.WriteLine("It didn't work, please try again.\nError message:" + exception.Message);
-                Console.WriteLine("If you want to try again, enter 0 and anything else to go back to the manu");
-                if (Console.ReadLine() == "0")
-                {
-                    AddCarToGarage(i_LicenseNumber);
-                }
+                AddCarToGarage(i_LicenseNumber);  
             }
         }
         internal void AddTruckToGarage(string i_LicenseNumber)
@@ -223,11 +217,8 @@ namespace Ex03.ConsoleUI
             catch (Exception exception)
             {
                 Console.WriteLine("It didn't work, please try again.\nError message:" + exception.Message);
-                Console.WriteLine("If you want to try again, enter 0 and anything else to go back to the manu");
-                if (Console.ReadLine() == "0")
-                {
-                    AddTruckToGarage(i_LicenseNumber);
-                }
+                AddTruckToGarage(i_LicenseNumber);
+                
             }
         }
 
@@ -273,13 +264,6 @@ namespace Ex03.ConsoleUI
         }
 
 
-
-
-
-
-
-
-
         internal void AddWheels(string i_LicenseNumber, int i_NumberOfWheels)
         {
             string[] ManufacturersOfWheelsName=new string[i_NumberOfWheels];
@@ -311,11 +295,7 @@ namespace Ex03.ConsoleUI
             catch (Exception exception)
             {
                 Console.WriteLine("It didn't work, please try again.\nError message:" + exception.Message);
-                Console.WriteLine("If you want to try again, enter 0 and anything else to go back to the manu");
-                if (Console.ReadLine() == "0")
-                {
-                    AddWheels(i_LicenseNumber, i_NumberOfWheels);
-                }
+                AddWheels(i_LicenseNumber, i_NumberOfWheels);
             }
         }
 
