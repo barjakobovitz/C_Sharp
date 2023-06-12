@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Ex03.GarageLogic
 {
-    internal abstract class FuelBasedVehicle : Vehicle
+    internal class FuelBasedVehicle : Vehicle
     {
 
         protected eFuelType m_FuelType;

@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{7785AFB0-6106-4D04-8979-F77AC3D61ADD}</ProjectGuid>
-    <OutputType>Library</OutputType>
-    <RootNamespace>Ex03.GarageLogic</RootNamespace>
-    <AssemblyName>Ex03.GarageLogic</AssemblyName>
+    <ProjectGuid>{52B3BFF5-A03E-41ED-A16B-A6239AC44B19}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>Ex04.Menus.Test</RootNamespace>
+    <AssemblyName>Ex04.Menus.Test</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -32,35 +32,18 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
-  <PropertyGroup>
-    <StartupObject />
-  </PropertyGroup>
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Car.cs" />
-    <Compile Include="CreateVehicleInGrage.cs" />
-    <Compile Include="ValueOutOfRangeException.cs" />
-    <Compile Include="ElectricCar.cs" />
-    <Compile Include="ElectricMotorcycle.cs" />
-    <Compile Include="FuelCar.cs" />
-    <Compile Include="FuelTruck.cs" />
-    <Compile Include="FuelMotorcycle.cs" />
-    <Compile Include="eRepairableCarType.cs" />
-    <Compile Include="eCarColor.cs" />
-    <Compile Include="eLicenseType.cs" />
-    <Compile Include="eNumberOfDoors.cs" />
-    <Compile Include="Motorcycle.cs" />
-    <Compile Include="Truck.cs" />
-    <Compile Include="ElectricVehicle.cs" />
-    <Compile Include="FuelBasedVehicle.cs" />
-    <Compile Include="eVehicleStatus.cs" />
-    <Compile Include="Vehicle.cs" />
-    <Compile Include="VehicleInGarage.cs" />
-    <Compile Include="Garage.cs" />
-    <Compile Include="eFuelType.cs" />
-    <Compile Include="Wheel.cs" />
+    <Compile Include="Test.cs" />
+    <Compile Include="Program.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Ex04.Menus.Events\Ex04.Menus.Events.csproj">
+      <Project>{230bf2de-183d-4596-98de-11fd8c83a17b}</Project>
+      <Name>Ex04.Menus.Events</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -1,0 +1,9 @@
+C:\Users\Zvika\C_SHARP\B23 Ex04 ZoharLevany 211390737 BarJakobovitz 209456425\Ex04.Menus.Events\bin\Debug\Ex04.Menus.Events.dll.config
+C:\Users\Zvika\C_SHARP\B23 Ex04 ZoharLevany 211390737 BarJakobovitz 209456425\Ex04.Menus.Events\bin\Debug\Ex04.Menus.Events.dll
+C:\Users\Zvika\C_SHARP\B23 Ex04 ZoharLevany 211390737 BarJakobovitz 209456425\Ex04.Menus.Events\bin\Debug\Ex04.Menus.Events.pdb
+C:\Users\Zvika\C_SHARP\B23 Ex04 ZoharLevany 211390737 BarJakobovitz 209456425\Ex04.Menus.Events\obj\Debug\Ex04.Menus.Events.csproj.AssemblyReference.cache
+C:\Users\Zvika\C_SHARP\B23 Ex04 ZoharLevany 211390737 BarJakobovitz 209456425\Ex04.Menus.Events\obj\Debug\Ex04.Menus.Events.csproj.CoreCompileInputs.cache
+C:\Users\Zvika\C_SHARP\B23 Ex04 ZoharLevany 211390737 BarJakobovitz 209456425\Ex04.Menus.Events\obj\Debug\Ex04.Menus.Events.dll
+C:\Users\Zvika\C_SHARP\B23 Ex04 ZoharLevany 211390737 BarJakobovitz 209456425\Ex04.Menus.Events\obj\Debug\Ex04.Menus.Events.pdb
+C:\Users\Zvika\C_SHARP\B23 Ex04 ZoharLevany 211390737 BarJakobovitz 209456425\Ex04.Menus.Events\bin\Debug\Ex02.ConsoleUtils.dll
+C:\Users\Zvika\C_SHARP\B23 Ex04 ZoharLevany 211390737 BarJakobovitz 209456425\Ex04.Menus.Events\obj\Debug\Ex04.Menus.Events.csproj.CopyComplete

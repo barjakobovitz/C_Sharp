@@ -1,0 +1,12 @@
+C:\Users\Zvika\C_SHARP\B23 Ex04 ZoharLevany 211390737 BarJakobovitz 209456425\Ex04.Menus.Test\bin\Debug\Ex04.Menus.Test.exe.config
+C:\Users\Zvika\C_SHARP\B23 Ex04 ZoharLevany 211390737 BarJakobovitz 209456425\Ex04.Menus.Test\bin\Debug\Ex04.Menus.Test.exe
+C:\Users\Zvika\C_SHARP\B23 Ex04 ZoharLevany 211390737 BarJakobovitz 209456425\Ex04.Menus.Test\bin\Debug\Ex04.Menus.Test.pdb
+C:\Users\Zvika\C_SHARP\B23 Ex04 ZoharLevany 211390737 BarJakobovitz 209456425\Ex04.Menus.Test\bin\Debug\Ex04.Menus.Events.dll
+C:\Users\Zvika\C_SHARP\B23 Ex04 ZoharLevany 211390737 BarJakobovitz 209456425\Ex04.Menus.Test\bin\Debug\Ex02.ConsoleUtils.dll
+C:\Users\Zvika\C_SHARP\B23 Ex04 ZoharLevany 211390737 BarJakobovitz 209456425\Ex04.Menus.Test\bin\Debug\Ex04.Menus.Events.pdb
+C:\Users\Zvika\C_SHARP\B23 Ex04 ZoharLevany 211390737 BarJakobovitz 209456425\Ex04.Menus.Test\bin\Debug\Ex04.Menus.Events.dll.config
+C:\Users\Zvika\C_SHARP\B23 Ex04 ZoharLevany 211390737 BarJakobovitz 209456425\Ex04.Menus.Test\obj\Debug\Ex04.Menus.Test.csproj.AssemblyReference.cache
+C:\Users\Zvika\C_SHARP\B23 Ex04 ZoharLevany 211390737 BarJakobovitz 209456425\Ex04.Menus.Test\obj\Debug\Ex04.Menus.Test.csproj.CoreCompileInputs.cache
+C:\Users\Zvika\C_SHARP\B23 Ex04 ZoharLevany 211390737 BarJakobovitz 209456425\Ex04.Menus.Test\obj\Debug\Ex04.Menus.Test.csproj.CopyComplete
+C:\Users\Zvika\C_SHARP\B23 Ex04 ZoharLevany 211390737 BarJakobovitz 209456425\Ex04.Menus.Test\obj\Debug\Ex04.Menus.Test.exe
+C:\Users\Zvika\C_SHARP\B23 Ex04 ZoharLevany 211390737 BarJakobovitz 209456425\Ex04.Menus.Test\obj\Debug\Ex04.Menus.Test.pdb
