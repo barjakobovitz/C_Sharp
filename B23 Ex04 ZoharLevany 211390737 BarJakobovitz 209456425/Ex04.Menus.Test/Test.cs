@@ -16,8 +16,9 @@ namespace Ex04.Menus.Test
         }
         public static void ShowTime()
         {
-            DateTime currentDate = DateTime.Now;
-            Console.WriteLine("Current date: " + currentDate.ToShortDateString());
+            DateTime currentTime = DateTime.Now;
+            int currentHour = currentTime.Hour;
+            Console.WriteLine("Current hour: " + currentHour);
         }
 
         public static void ShowVersion()
