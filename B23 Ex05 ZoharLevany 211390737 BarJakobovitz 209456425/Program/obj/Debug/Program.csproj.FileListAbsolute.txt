@@ -1,0 +1,4 @@
+C:\Users\Zvika\C_SHARP\B23 Ex05 ZoharLevany 211390737 BarJakobovitz 209456425\Program\obj\Debug\Program.csproj.AssemblyReference.cache
+C:\Users\Zvika\C_SHARP\B23 Ex05 ZoharLevany 211390737 BarJakobovitz 209456425\Program\obj\Debug\Program.Form1.resources
+C:\Users\Zvika\C_SHARP\B23 Ex05 ZoharLevany 211390737 BarJakobovitz 209456425\Program\obj\Debug\Program.csproj.GenerateResource.cache
+C:\Users\Zvika\C_SHARP\B23 Ex05 ZoharLevany 211390737 BarJakobovitz 209456425\Program\obj\Debug\Program.csproj.CoreCompileInputs.cache

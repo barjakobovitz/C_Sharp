@@ -1,0 +1,9 @@
+C:\Users\Zvika\C_SHARP\B23 Ex05 ZoharLevany 211390737 BarJakobovitz 209456425\Program\obj\Debug\Ex05.csproj.AssemblyReference.cache
+C:\Users\Zvika\C_SHARP\B23 Ex05 ZoharLevany 211390737 BarJakobovitz 209456425\Program\obj\Debug\Ex05.GameSettingForm.resources
+C:\Users\Zvika\C_SHARP\B23 Ex05 ZoharLevany 211390737 BarJakobovitz 209456425\Program\obj\Debug\Ex05.csproj.GenerateResource.cache
+C:\Users\Zvika\C_SHARP\B23 Ex05 ZoharLevany 211390737 BarJakobovitz 209456425\Program\obj\Debug\Ex05.csproj.CoreCompileInputs.cache
+C:\Users\Zvika\C_SHARP\B23 Ex05 ZoharLevany 211390737 BarJakobovitz 209456425\Program\bin\Debug\Ex05.exe.config
+C:\Users\Zvika\C_SHARP\B23 Ex05 ZoharLevany 211390737 BarJakobovitz 209456425\Program\bin\Debug\Ex05.exe
+C:\Users\Zvika\C_SHARP\B23 Ex05 ZoharLevany 211390737 BarJakobovitz 209456425\Program\bin\Debug\Ex05.pdb
+C:\Users\Zvika\C_SHARP\B23 Ex05 ZoharLevany 211390737 BarJakobovitz 209456425\Program\obj\Debug\Ex05.exe
+C:\Users\Zvika\C_SHARP\B23 Ex05 ZoharLevany 211390737 BarJakobovitz 209456425\Program\obj\Debug\Ex05.pdb

@@ -1,12 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Ex03.ConsoleUI
+﻿namespace Ex03.ConsoleUI
 {
-    static class Program
+    // $G$ NTT-999 (-7) You should have use: Environment.NewLine instead of "\n" - relevant for the all solution
+    // $G$ CSS-999 (-10) This method should be a private method - relevant for the all solution (if the methods is wrote in order to help you - most of the time we define it as private method
+    public static class Program
     {
         public static void Main()
         {

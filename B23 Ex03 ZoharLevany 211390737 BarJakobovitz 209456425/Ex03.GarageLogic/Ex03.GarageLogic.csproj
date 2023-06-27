@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{7785AFB0-6106-4D04-8979-F77AC3D61ADD}</ProjectGuid>
+    <ProjectGuid>{2CFD3A0F-B7FF-4D3D-8C4B-C25D3743D128}</ProjectGuid>
     <OutputType>Library</OutputType>
     <RootNamespace>Ex03.GarageLogic</RootNamespace>
     <AssemblyName>Ex03.GarageLogic</AssemblyName>
@@ -40,26 +40,27 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Car.cs" />
-    <Compile Include="CreateVehicleInGrage.cs" />
-    <Compile Include="ValueOutOfRangeException.cs" />
+    <Compile Include="eCarColor.cs" />
+    <Compile Include="eFuelType.cs" />
     <Compile Include="ElectricCar.cs" />
     <Compile Include="ElectricMotorcycle.cs" />
-    <Compile Include="FuelCar.cs" />
-    <Compile Include="FuelTruck.cs" />
-    <Compile Include="FuelMotorcycle.cs" />
-    <Compile Include="eRepairableCarType.cs" />
-    <Compile Include="eCarColor.cs" />
+    <Compile Include="ElectricVehicle.cs" />
     <Compile Include="eLicenseType.cs" />
-    <Compile Include="eNumberOfDoors.cs" />
+    <Compile Include="eNumberOfDors.cs" />
+    <Compile Include="eRepairableCarType.cs" />
+    <Compile Include="eVehicleEnergyType.cs" />
+    <Compile Include="eVehicleStatus.cs" />
+    <Compile Include="FuelBasedVehicle.cs" />
+    <Compile Include="FuelCar.cs" />
+    <Compile Include="FuelMotorcycle.cs" />
+    <Compile Include="FuelTruck.cs" />
+    <Compile Include="Garage.cs" />
     <Compile Include="Motorcycle.cs" />
     <Compile Include="Truck.cs" />
-    <Compile Include="ElectricVehicle.cs" />
-    <Compile Include="FuelBasedVehicle.cs" />
-    <Compile Include="eVehicleStatus.cs" />
+    <Compile Include="ValueOutOfRangeException.cs" />
     <Compile Include="Vehicle.cs" />
+    <Compile Include="VehicleCreator.cs" />
     <Compile Include="VehicleInGarage.cs" />
-    <Compile Include="Garage.cs" />
-    <Compile Include="eFuelType.cs" />
     <Compile Include="Wheel.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

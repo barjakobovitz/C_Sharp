@@ -1,15 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Ex03.GarageLogic
+﻿namespace Ex03.GarageLogic
 {
     internal class ElectricCar : ElectricVehicle
     {
         private Car m_Car;
-        private const float k_MaxTimeOfEngineOperationOfCar= 5.2f;
+        private const float k_MaxTimeOfEngineOperationOfCar = 5.2f;
+
         internal ElectricCar(string i_ModelName, string i_LicenseNumber) : base(i_ModelName, i_LicenseNumber)
         {
             m_MaxTimeOfEngineOperation = k_MaxTimeOfEngineOperationOfCar;
@@ -42,6 +37,5 @@ namespace Ex03.GarageLogic
         {
             return $"{base.ToString()}\n{m_Car.InfoAboutCar()}";
         }
-
     }
 }

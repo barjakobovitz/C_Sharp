@@ -1,28 +1,22 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Ex03.GarageLogic
 {
-    internal class FuelBasedVehicle : Vehicle
+    internal abstract class FuelBasedVehicle : Vehicle
     {
-
         protected eFuelType m_FuelType;
         protected float m_MaxAmountOfFuel;
 
+        internal FuelBasedVehicle(string i_ModeName, string i_LicenseNumber) : base(i_ModeName, i_LicenseNumber) 
+        {
+        }
 
-        internal FuelBasedVehicle(string i_ModeName, string i_LicenseNumber) : base(i_ModeName, i_LicenseNumber) { }
-  
-       
         internal float CurrentAmountOfFuel
         {
             get
             {
                 return m_RemainingEnergyPercentage;
             }
-
 
             set
             {
@@ -33,6 +27,7 @@ namespace Ex03.GarageLogic
         internal void Refueling(float i_FuelToAdd, eFuelType i_FuelType)
         {
             string message;
+
             if (i_FuelType == m_FuelType)
             {
                 if ((m_RemainingEnergyPercentage + i_FuelToAdd) < m_MaxAmountOfFuel)
@@ -52,6 +47,7 @@ namespace Ex03.GarageLogic
                 throw new ArgumentException(message);
             }
         }
+
         public override string ToString()
         {
             string fuelInfo = $"Current Amount Of Fuel: {m_RemainingEnergyPercentage}\nFuel Type: {m_FuelType}";
@@ -59,5 +55,3 @@ namespace Ex03.GarageLogic
         }
     }
 }
-
-

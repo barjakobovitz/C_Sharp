@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 
 namespace Ex03.GarageLogic
 {
@@ -10,7 +9,6 @@ namespace Ex03.GarageLogic
     {
         private readonly Dictionary<string, VehicleInGarage> r_DictionryOfVehiclesInGarage = new Dictionary<string, VehicleInGarage> { };
         private List<eRepairableCarType> m_ListOfVehiclesThatCanBeHandled = new List<eRepairableCarType>();
-
 
         public Garage()
         {
@@ -39,23 +37,23 @@ namespace Ex03.GarageLogic
             {
                 listOfLicenseNumberOfAnyStatus.AppendLine(ListOfLicenseNumberOfASpecificStatus(vehicleStatus));
             }
-                return listOfLicenseNumberOfAnyStatus.ToString();
+            return listOfLicenseNumberOfAnyStatus.ToString();
         }
 
         public string ListOfLicenseNumberOfASpecificStatus(eVehicleStatus i_VehicleStatus)
         {
             StringBuilder listOfLicenseNumberOfASpecificStatus = new StringBuilder();
-            foreach(VehicleInGarage vehicleInGarage in r_DictionryOfVehiclesInGarage.Values)
+            foreach (VehicleInGarage vehicleInGarage in r_DictionryOfVehiclesInGarage.Values)
             {
-                if (vehicleInGarage.VehicleStatus== i_VehicleStatus)
+                if (vehicleInGarage.VehicleStatus == i_VehicleStatus)
                 {
-                    listOfLicenseNumberOfASpecificStatus.AppendLine(vehicleInGarage.Vehicle.LicenseNumber+"\n");
+                    listOfLicenseNumberOfASpecificStatus.AppendLine(vehicleInGarage.Vehicle.LicenseNumber + "\n");
                 }
             }
             return listOfLicenseNumberOfASpecificStatus.ToString();
         }
 
-        public void UpdateVehicleStatus(eVehicleStatus i_VehicleStatus, string i_LicenseNumber )
+        public void UpdateVehicleStatus(eVehicleStatus i_VehicleStatus, string i_LicenseNumber)
         {
             r_DictionryOfVehiclesInGarage[i_LicenseNumber].VehicleStatus = i_VehicleStatus;
         }
@@ -64,7 +62,7 @@ namespace Ex03.GarageLogic
         {
             foreach (Wheel wheel in r_DictionryOfVehiclesInGarage[i_LicenseNumber].Vehicle.Wheels)
             {
-                wheel.InflateAction(wheel.MaxAirPressure-wheel.CurrentAirPressure);
+                wheel.InflateAction(wheel.MaxAirPressure - wheel.CurrentAirPressure);
             }
         }
 
@@ -78,21 +76,22 @@ namespace Ex03.GarageLogic
 
         public void Recharging(string i_LicenseNumber, float i_MinutesToCharge)
         {
-            float hoursToCharge =i_MinutesToCharge/60;
+            float hoursToCharge = i_MinutesToCharge / 60;
             if (r_DictionryOfVehiclesInGarage[i_LicenseNumber].Vehicle is ElectricVehicle electricVehicle)
             {
 
                 electricVehicle.Recharging(hoursToCharge);
             }
         }
+
         public string VehicleInformation(string i_LicenseNumber)
         {
             return r_DictionryOfVehiclesInGarage[i_LicenseNumber].ToString();
         }
 
-        public void AddMotorcycle(string LicenseNumber, eLicenseType i_LicenseType, int i_EngainVolume)
+        public void AddMotorcycle(string i_LicenseNumber, eLicenseType i_LicenseType, int i_EngainVolume)
         {
-            Vehicle vehicle = r_DictionryOfVehiclesInGarage[LicenseNumber].Vehicle;
+            Vehicle vehicle = r_DictionryOfVehiclesInGarage[i_LicenseNumber].Vehicle;
             if (vehicle is ElectricMotorcycle electricMotorcycle)
             {
                 electricMotorcycle.AddMotorcycle(i_LicenseType, i_EngainVolume);
@@ -102,9 +101,10 @@ namespace Ex03.GarageLogic
                 fuelMotorcycle.AddMotorcycle(i_LicenseType, i_EngainVolume);
             }
         }
-        public void AddCar(string LicenseNumber, eCarColor i_Color, eNumberOfDors i_NumberOfDors)
+
+        public void AddCar(string i_LicenseNumber, eCarColor i_Color, eNumberOfDors i_NumberOfDors)
         {
-            Vehicle vehicle = r_DictionryOfVehiclesInGarage[LicenseNumber].Vehicle;
+            Vehicle vehicle = r_DictionryOfVehiclesInGarage[i_LicenseNumber].Vehicle;
             if (vehicle is ElectricCar electricCar)
             {
                 electricCar.AddCar(i_Color, i_NumberOfDors);
@@ -114,9 +114,9 @@ namespace Ex03.GarageLogic
                 fuelCar.AddCar(i_Color, i_NumberOfDors);
             }
         }
-        public void AddTruck(string LicenseNumber, bool i_DoesItContainDengerousMaterials, float i_CargoTankVolume)
+        public void AddTruck(string i_LicenseNumber, bool i_DoesItContainDengerousMaterials, float i_CargoTankVolume)
         {
-            Vehicle vehicle = r_DictionryOfVehiclesInGarage[LicenseNumber].Vehicle;
+            Vehicle vehicle = r_DictionryOfVehiclesInGarage[i_LicenseNumber].Vehicle;
             FuelTruck fuelTruck = (FuelTruck)vehicle;
             fuelTruck.AddTruck(i_DoesItContainDengerousMaterials, i_CargoTankVolume);
         }
@@ -126,11 +126,10 @@ namespace Ex03.GarageLogic
             return r_DictionryOfVehiclesInGarage.ContainsKey(i_LicenseNumber);
         }
 
-        public void AddWheels(string LicenseNumber, string[] i_ManufacturersOfWheelsName, float[] i_CurrentAirPressureOfTheWheels)
+        public void AddWheels(string i_LicenseNumber, string[] i_ManufacturersOfWheelsName, float[] i_CurrentAirPressureOfTheWheels)
         {
-            Vehicle vehicle = r_DictionryOfVehiclesInGarage[LicenseNumber].Vehicle;
-            vehicle.AddWheels(i_ManufacturersOfWheelsName,i_CurrentAirPressureOfTheWheels);
+            Vehicle vehicle = r_DictionryOfVehiclesInGarage[i_LicenseNumber].Vehicle;
+            vehicle.AddWheels(i_ManufacturersOfWheelsName, i_CurrentAirPressureOfTheWheels);
         }
-
     }
 }

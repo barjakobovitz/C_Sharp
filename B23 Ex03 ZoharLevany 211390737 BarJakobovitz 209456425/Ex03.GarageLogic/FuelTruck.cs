@@ -1,17 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Ex03.GarageLogic
+﻿namespace Ex03.GarageLogic
 {
     internal class FuelTruck : FuelBasedVehicle
     {
         private Truck m_Truck;
         private const float k_MaxAmountOfFuelOfTruck = 135;
         private const eFuelType k_FuelType = eFuelType.Soler;
-
 
         internal FuelTruck(string i_ModeName, string i_LicenseNumber) : base(i_ModeName, i_LicenseNumber)
         {
@@ -20,7 +13,7 @@ namespace Ex03.GarageLogic
             m_MaxAirPressure = Truck.s_MaxAirPressure;
         }
 
-    internal void AddTruck(bool i_DoesItContainDengerousMaterials, float i_CargoTankVolume)
+        internal void AddTruck(bool i_DoesItContainDengerousMaterials, float i_CargoTankVolume)
         {
             m_Truck = new Truck(i_DoesItContainDengerousMaterials, i_CargoTankVolume);
         }
@@ -40,7 +33,6 @@ namespace Ex03.GarageLogic
                 return m_Truck.CargoTankVolume;
             }
         }
-
 
         public override string ToString()
         {
