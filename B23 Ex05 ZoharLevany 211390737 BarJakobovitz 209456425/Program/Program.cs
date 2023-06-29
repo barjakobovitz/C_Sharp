@@ -6,14 +6,19 @@ using System.Threading.Tasks;
 
 namespace Ex05
 {
-    public class GameMannager
+    public class Program
     {
         
         public static void Main()
         {
+
             GameSettingForm gameSettingForm = new GameSettingForm();
             gameSettingForm.ShowDialog();
-            
+
+            ///Form1 x = new Form1(10,"bar","zohar",50,10);
+            ///x.ShowDialog();
+
+
         }
  
 

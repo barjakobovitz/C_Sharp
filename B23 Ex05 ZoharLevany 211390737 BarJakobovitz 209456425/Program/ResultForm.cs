@@ -12,9 +12,35 @@ namespace Ex05
 {
     public partial class ResultForm : Form
     {
-        public ResultForm()
+        internal bool m_whetherToPlayAnotherAround=false;
+        internal ResultForm(string i_WinnerName)
         {
             InitializeComponent();
+            if (i_WinnerName == "Tie")
+            {
+                Text = "A Tie!";
+                this.ResultLabel.Text = "Tie!";
+            }
+            else 
+            {
+                Text = "A Win!";
+                this.ResultLabel.Text = $"The winner is {i_WinnerName}!";
+            }
+         
+        }
+        private void NoButton_Click(object sender, EventArgs e)
+        {
+            m_whetherToPlayAnotherAround = false;
+        }
+
+        private void YesButton_Click(object sender, EventArgs e)
+        {
+            m_whetherToPlayAnotherAround = true;
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

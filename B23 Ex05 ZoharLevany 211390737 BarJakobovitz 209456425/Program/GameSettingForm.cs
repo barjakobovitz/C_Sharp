@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Diagnostics;
 
 namespace Ex05
 {
@@ -16,6 +17,7 @@ namespace Ex05
         {
             InitializeComponent();
             StartButton.Click += StartButton_Click;
+            
         }
         public bool WhetherTheGameAgainstComputer
         {
@@ -66,13 +68,14 @@ namespace Ex05
             bool isTheGameAgainstComputer = this.WhetherTheGameAgainstComputer;
             string Player1Name = this.Player1Name;
             string Player2Name = this.Player2Name;
-            if (Player2Name.Equals(string.Empty))
+            if (Player2Name.Equals("[Computer]"))
             {
                 Player2Name = "Computer";
             }
             this.Close();
-            //Game game = new Game(boardSize, isTheGameAgainstComputer, Player1Name, Player2Name);
-            //game.PlayGame();
+            Form1 game = new Form1(boardSize, Player1Name, Player2Name,0,0, isTheGameAgainstComputer);
+            game.ShowDialog();
+          
         }
 
         private void Player1TextBox_TextChanged(object sender, EventArgs e)
