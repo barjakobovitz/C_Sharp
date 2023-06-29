@@ -13,11 +13,10 @@ namespace Ex05
 {
     public partial class GameSettingForm : Form
     {
+        static int i = 0;
         public GameSettingForm()
         {
             InitializeComponent();
-            StartButton.Click += StartButton_Click;
-            
         }
         public bool WhetherTheGameAgainstComputer
         {
@@ -72,10 +71,10 @@ namespace Ex05
             {
                 Player2Name = "Computer";
             }
-            this.Close();
-            Form1 game = new Form1(boardSize, Player1Name, Player2Name,0,0, isTheGameAgainstComputer);
+            this.Hide();
+            Form1 game = new Form1(boardSize, Player1Name, Player2Name,i,0, isTheGameAgainstComputer);
             game.ShowDialog();
-          
+            this.Close();
         }
 
         private void Player1TextBox_TextChanged(object sender, EventArgs e)

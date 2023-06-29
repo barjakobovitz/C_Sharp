@@ -15,8 +15,8 @@ namespace Ex05
             GameSettingForm gameSettingForm = new GameSettingForm();
             gameSettingForm.ShowDialog();
 
-            ///Form1 x = new Form1(10,"bar","zohar",50,10);
-            ///x.ShowDialog();
+            //Form1 x = new Form1(5,"bar","zohar",50,10,false);
+            //x.ShowDialog();
             ///
 
             //ResultForm x = new ResultForm("Bar");

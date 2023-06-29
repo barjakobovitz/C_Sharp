@@ -12,9 +12,7 @@ namespace Ex05
         private Player m_FirstPlayer;
         private Player m_SecondPlayer;
         private readonly bool r_IsTheGameAgainstComputer;
-        Form1 Form;
         bool isPlayerOneTurn = true;
-        bool doYouWantToPlayAgain = true;
         int[] spotInTheTable;
         eGameSign winner = eGameSign.Empty;
         string winnerName = "";
