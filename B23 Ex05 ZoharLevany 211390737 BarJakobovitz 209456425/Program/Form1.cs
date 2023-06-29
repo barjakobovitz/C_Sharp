@@ -92,6 +92,7 @@ namespace Ex05
             resultForm.ShowDialog();
             if(resultForm.m_whetherToPlayAnotherAround)
             {
+
                 NewGame();
             }
             else
@@ -102,7 +103,14 @@ namespace Ex05
         }
         internal void NewGame()
         {
-
+            foreach (Control control in Controls)
+            {
+                if (control is ButtonForMatrix buttonForMetrix)
+                {
+                    buttonForMetrix.Text = string.Empty;
+                    buttonForMetrix.Enabled = true;
+                }
+            }
             game.playAgain();
 
         }

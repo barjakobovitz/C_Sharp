@@ -17,6 +17,10 @@ namespace Ex05
 
             ///Form1 x = new Form1(10,"bar","zohar",50,10);
             ///x.ShowDialog();
+            ///
+
+            //ResultForm x = new ResultForm("Bar");
+            //x.ShowDialog();
 
 
         }

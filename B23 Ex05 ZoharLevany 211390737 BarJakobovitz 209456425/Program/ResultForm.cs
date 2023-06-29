@@ -28,19 +28,24 @@ namespace Ex05
             }
          
         }
+
         private void NoButton_Click(object sender, EventArgs e)
         {
             m_whetherToPlayAnotherAround = false;
+            this.Close();
         }
 
         private void YesButton_Click(object sender, EventArgs e)
         {
             m_whetherToPlayAnotherAround = true;
+            this.Close();
         }
 
         private void label1_Click(object sender, EventArgs e)
         {
 
         }
+
+
     }
 }

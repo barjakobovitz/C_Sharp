@@ -53,6 +53,7 @@ namespace Ex05
             this.Nobutton.TabIndex = 1;
             this.Nobutton.Text = "No";
             this.Nobutton.UseVisualStyleBackColor = true;
+            this.Nobutton.Click += new System.EventHandler(this.NoButton_Click);
             // 
             // PlayAgainlabel
             // 
