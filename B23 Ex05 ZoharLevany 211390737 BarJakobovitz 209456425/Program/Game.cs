@@ -9,11 +9,10 @@ namespace Ex05
     internal class Game
     {
         private readonly Board r_Board;
-        private Player m_FirstPlayer;
-        private Player m_SecondPlayer;
+        internal Player m_FirstPlayer;
+        internal Player m_SecondPlayer;
         private readonly bool r_IsTheGameAgainstComputer;
         bool isPlayerOneTurn = true;
-        int[] spotInTheTable;
         eGameSign winner = eGameSign.Empty;
         string winnerName = "";
 
@@ -24,6 +23,16 @@ namespace Ex05
             m_FirstPlayer = new Player(eGameSign.X, i_Player1Name);
             m_SecondPlayer = new Player(eGameSign.O, i_Player2Name);
             r_IsTheGameAgainstComputer = i_IsTheGameAgainstComputer;
+        }
+
+        internal Player FirstPlayer
+        {
+            get { return m_FirstPlayer; }
+        }
+
+        public Player SecondPlayer
+        {
+            get { return m_SecondPlayer; }
         }
 
         /*

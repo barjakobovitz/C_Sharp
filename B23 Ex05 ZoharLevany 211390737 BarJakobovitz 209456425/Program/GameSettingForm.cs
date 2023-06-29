@@ -17,6 +17,7 @@ namespace Ex05
         public GameSettingForm()
         {
             InitializeComponent();
+            FormBorderStyle = FormBorderStyle.FixedSingle;
         }
         public bool WhetherTheGameAgainstComputer
         {

@@ -24,8 +24,8 @@ namespace Ex05
         public Form1(int i_Size,string i_Player1Name,string i_Player2Name,int i_Player1Score, int i_Player2Score, bool i_IsTheGameAgainstComputer) :base()
         {
             InitializeComponent();
+            FormBorderStyle = FormBorderStyle.FixedSingle;
             boardSize = i_Size;
-            StartPosition = FormStartPosition.CenterScreen;
             int formWidth = (i_Size) * ButtonWidth + (i_Size+4) *(ButtonWidth/10);
             int formHeight = (i_Size) * ButtonHeight + (i_Size+4)*(ButtonWidth/10)+ButtonHeight;
             Size = new Size(formWidth, formHeight);
@@ -46,14 +46,14 @@ namespace Ex05
             }
 
             Label Player1Details=new Label();
-            Player1Details.Location = new System.Drawing.Point(formWidth/2- ButtonWidth, ButtonHeight * i_Size + (ButtonHeight/10) * (i_Size + 1));
+            Player1Details.Name = "Player1Details";
+            Player1Details.Location = new System.Drawing.Point(0, ButtonHeight * i_Size + (ButtonHeight/10) * (i_Size + 1));
             Player1Details.Text = $"{i_Player1Name}: {i_Player1Score}";
-            Player1Details.Size= new Size(50, 50);
             Controls.Add(Player1Details);
             Label Player2Details=new Label();
-            Player2Details.Location = new System.Drawing.Point(formWidth / 2 + ButtonWidth, ButtonHeight * i_Size + (ButtonHeight/10) * (i_Size + 1));
+            Player2Details.Name = "Player2Details";
+            Player2Details.Location = new System.Drawing.Point(formWidth / 2 , ButtonHeight * i_Size + (ButtonHeight/10) * (i_Size + 1));
             Player2Details.Text = $"{i_Player2Name}: {i_Player2Score}";
-            Player2Details.Size = new Size(50, 50);
             Controls.Add(Player2Details);
             game = new Game(i_Size, i_IsTheGameAgainstComputer, i_Player1Name, i_Player2Name,this);
 
@@ -102,7 +102,7 @@ namespace Ex05
         {
             ResultForm resultForm = new ResultForm(i_WinnerName);
             resultForm.ShowDialog();
-            if(resultForm.m_whetherToPlayAnotherAround)
+            if (resultForm.m_whetherToPlayAnotherAround)
             {
 
                 NewGame();
@@ -115,6 +115,8 @@ namespace Ex05
         }
         internal void NewGame()
         {
+            Controls["Player1Details"].Text = $"{game.FirstPlayer.Name}: {game.FirstPlayer.Score}";
+            Controls["Player2Details"].Text = $"{game.SecondPlayer.Name}: {game.SecondPlayer.Score}";
             foreach (Control control in Controls)
             {
                 if (control is ButtonForMatrix buttonForMetrix)

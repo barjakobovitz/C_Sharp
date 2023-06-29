@@ -184,6 +184,7 @@ namespace Ex05
             this.Controls.Add(this.StartButton);
             this.Controls.Add(this.Player2CheckBox);
             this.Name = "GameSettingForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Game Setting Form";
             this.Load += new System.EventHandler(this.GameSettingForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.RowsNumericUpDown)).EndInit();

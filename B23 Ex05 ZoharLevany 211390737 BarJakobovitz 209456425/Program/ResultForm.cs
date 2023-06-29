@@ -16,6 +16,7 @@ namespace Ex05
         internal ResultForm(string i_WinnerName)
         {
             InitializeComponent();
+            FormBorderStyle = FormBorderStyle.FixedSingle;
             if (i_WinnerName == "Tie")
             {
                 Text = "A Tie!";
@@ -26,7 +27,8 @@ namespace Ex05
                 Text = "A Win!";
                 this.ResultLabel.Text = $"The winner is {i_WinnerName}!";
             }
-         
+            
+
         }
 
         private void NoButton_Click(object sender, EventArgs e)
@@ -46,6 +48,9 @@ namespace Ex05
 
         }
 
+        private void ResultForm_Load(object sender, EventArgs e)
+        {
 
+        }
     }
 }

@@ -83,7 +83,9 @@ namespace Ex05
             this.Controls.Add(this.Nobutton);
             this.Controls.Add(this.YesButton);
             this.Name = "ResultForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Form2";
+            this.Load += new System.EventHandler(this.ResultForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
