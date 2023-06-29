@@ -48,6 +48,10 @@ namespace Ex05
             {
                 Player2TextBox.Text = "[Computer]";
             }
+            else
+            {
+                Player2TextBox.Text = string.Empty;
+            }
 
 
         }

@@ -59,7 +59,7 @@ namespace Ex05
             this.StartButton.Location = new System.Drawing.Point(180, 349);
             this.StartButton.Name = "StartButton";
             this.StartButton.Size = new System.Drawing.Size(302, 52);
-            this.StartButton.TabIndex = 1;
+            this.StartButton.TabIndex = 5;
             this.StartButton.Text = "Start!";
             this.StartButton.UseVisualStyleBackColor = true;
             this.StartButton.Click += new System.EventHandler(this.StartButton_Click);
@@ -89,7 +89,7 @@ namespace Ex05
             this.Player1TextBox.Location = new System.Drawing.Point(278, 88);
             this.Player1TextBox.Name = "Player1TextBox";
             this.Player1TextBox.Size = new System.Drawing.Size(227, 38);
-            this.Player1TextBox.TabIndex = 4;
+            this.Player1TextBox.TabIndex = 1;
             this.Player1TextBox.TextChanged += new System.EventHandler(this.Player1TextBox_TextChanged_1);
             // 
             // Player2TextBox
@@ -98,7 +98,7 @@ namespace Ex05
             this.Player2TextBox.Location = new System.Drawing.Point(278, 145);
             this.Player2TextBox.Name = "Player2TextBox";
             this.Player2TextBox.Size = new System.Drawing.Size(227, 38);
-            this.Player2TextBox.TabIndex = 5;
+            this.Player2TextBox.TabIndex = 2;
             this.Player2TextBox.Text = "[Computer]";
             this.Player2TextBox.TextChanged += new System.EventHandler(this.Player2TextBox_TextChanged_1);
             // 
@@ -117,7 +117,7 @@ namespace Ex05
             0});
             this.RowsNumericUpDown.Name = "RowsNumericUpDown";
             this.RowsNumericUpDown.Size = new System.Drawing.Size(81, 38);
-            this.RowsNumericUpDown.TabIndex = 6;
+            this.RowsNumericUpDown.TabIndex = 3;
             this.RowsNumericUpDown.Value = new decimal(new int[] {
             4,
             0,
@@ -140,7 +140,7 @@ namespace Ex05
             0});
             this.ColsNumericUpDown.Name = "ColsNumericUpDown";
             this.ColsNumericUpDown.Size = new System.Drawing.Size(82, 38);
-            this.ColsNumericUpDown.TabIndex = 7;
+            this.ColsNumericUpDown.TabIndex = 4;
             this.ColsNumericUpDown.Value = new decimal(new int[] {
             4,
             0,

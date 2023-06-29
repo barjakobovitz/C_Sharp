@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace Ex05
 {
@@ -11,7 +12,7 @@ namespace Ex05
         
         public static void Main()
         {
-
+            
             GameSettingForm gameSettingForm = new GameSettingForm();
             gameSettingForm.ShowDialog();
 

@@ -7,7 +7,6 @@ C:\Users\Zvika\C_SHARP\B23 Ex05 ZoharLevany 211390737 BarJakobovitz 209456425\Pr
 C:\Users\Zvika\C_SHARP\B23 Ex05 ZoharLevany 211390737 BarJakobovitz 209456425\Program\bin\Debug\Ex05.pdb
 C:\Users\Zvika\C_SHARP\B23 Ex05 ZoharLevany 211390737 BarJakobovitz 209456425\Program\obj\Debug\Ex05.exe
 C:\Users\Zvika\C_SHARP\B23 Ex05 ZoharLevany 211390737 BarJakobovitz 209456425\Program\obj\Debug\Ex05.pdb
-C:\Users\Zvika\C_SHARP\B23 Ex05 ZoharLevany 211390737 BarJakobovitz 209456425\Program\obj\Debug\Ex05.ResultForm.resources
 C:\Users\Zvika\C_SHARP\B23 Ex05 ZoharLevany 211390737 BarJakobovitz 209456425\Program\bin\Debug\Ex02.ConsoleUtils.dll
 C:\Users\Zvika\C_SHARP\B23 Ex05 ZoharLevany 211390737 BarJakobovitz 209456425\Program\obj\Debug\Ex05.csproj.CopyComplete
 C:\Users\Zvika\C_SHARP\B23 Ex05 ZoharLevany 211390737 BarJakobovitz 209456425\Program\obj\Debug\Ex05.Form1.resources

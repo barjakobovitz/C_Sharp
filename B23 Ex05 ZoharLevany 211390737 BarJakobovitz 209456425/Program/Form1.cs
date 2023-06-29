@@ -47,12 +47,15 @@ namespace Ex05
 
             Label Player1Details=new Label();
             Player1Details.Name = "Player1Details";
-            Player1Details.Location = new System.Drawing.Point(0, ButtonHeight * i_Size + (ButtonHeight/10) * (i_Size + 1));
+            Player1Details.Location = new System.Drawing.Point((ClientSize.Width - Player1Details.Width) / 2 , ButtonHeight * i_Size + (ButtonHeight/10) * (i_Size + 1));
+            Player1Details.AutoSize = true;
             Player1Details.Text = $"{i_Player1Name}: {i_Player1Score}";
+            Player1Details.Font = new Font(Player1Details.Font, FontStyle.Bold);
             Controls.Add(Player1Details);
             Label Player2Details=new Label();
             Player2Details.Name = "Player2Details";
-            Player2Details.Location = new System.Drawing.Point(formWidth / 2 , ButtonHeight * i_Size + (ButtonHeight/10) * (i_Size + 1));
+            Player2Details.Location = new System.Drawing.Point((ClientSize.Width) / 2, ButtonHeight * i_Size + (ButtonHeight/10) * (i_Size + 1));
+            Player2Details.AutoSize = true;
             Player2Details.Text = $"{i_Player2Name}: {i_Player2Score}";
             Controls.Add(Player2Details);
             game = new Game(i_Size, i_IsTheGameAgainstComputer, i_Player1Name, i_Player2Name,this);
@@ -67,10 +70,15 @@ namespace Ex05
             if (IsPlayer1Play || IsTheGameAgainstComputer)
             {
                 button.Text = "X";
+                Controls["Player1Details"].Font = DefaultFont;
+                Controls["Player2Details"].Font = new Font(Controls["Player2Details"].Font, FontStyle.Bold);
             }
             else
             {
                 button.Text = "O";
+                Controls["Player2Details"].Font = DefaultFont;
+                Controls["Player1Details"].Font = new Font(Controls["Player1Details"].Font, FontStyle.Bold);
+
             }
             IsPlayer1Play = !IsPlayer1Play;
             button.Enabled = false;
@@ -95,14 +103,29 @@ namespace Ex05
         {
             Controls[spotInTheBoard[0]*boardSize+spotInTheBoard[1]].Text ="O";
             Controls[spotInTheBoard[0] * boardSize + spotInTheBoard[1]].Enabled = false;
+            Controls["Player2Details"].Font = DefaultFont;
+            Controls["Player1Details"].Font = new Font(Controls["Player1Details"].Font, FontStyle.Bold);
         }
 
 
         internal void AnnounceWinner(string i_WinnerName)
         {
-            ResultForm resultForm = new ResultForm(i_WinnerName);
-            resultForm.ShowDialog();
-            if (resultForm.m_whetherToPlayAnotherAround)
+            StringBuilder text=new StringBuilder();
+            string WindowName;
+
+            if (i_WinnerName == "Tie")
+            {
+                WindowName = "A Tie!";
+                text.AppendLine("Tie!");
+            }
+            else
+            {
+                WindowName = "A Win!";
+                text.AppendLine($"The winner is { i_WinnerName }!");
+            }
+            text.AppendLine("Would you like to play another round?");
+            DialogResult result = MessageBox.Show(text.ToString(),WindowName, MessageBoxButtons.YesNo);
+            if (DialogResult.Yes == result)
             {
 
                 NewGame();
