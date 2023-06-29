@@ -17,12 +17,14 @@ namespace Ex05
         private Game game;
         bool IsTheGameAgainstComputer;
         bool IsPlayer1Play=true;
+        int boardSize;
 
 
 
         public Form1(int i_Size,string i_Player1Name,string i_Player2Name,int i_Player1Score, int i_Player2Score, bool i_IsTheGameAgainstComputer) :base()
         {
             InitializeComponent();
+            boardSize = i_Size;
             StartPosition = FormStartPosition.CenterScreen;
             int formWidth = (i_Size) * ButtonWidth + (i_Size+4) *(ButtonWidth/10);
             int formHeight = (i_Size) * ButtonHeight + (i_Size+4)*(ButtonWidth/10)+ButtonHeight;
@@ -62,7 +64,7 @@ namespace Ex05
         {
             string WinnerName;
             ButtonForMatrix button = (ButtonForMatrix)sender;
-            if (IsPlayer1Play)
+            if (IsPlayer1Play || IsTheGameAgainstComputer)
             {
                 button.Text = "X";
             }
@@ -73,6 +75,10 @@ namespace Ex05
             IsPlayer1Play = !IsPlayer1Play;
             button.Enabled = false;
             game.PlayRound(button.Row,button.Col);
+            if (IsTheGameAgainstComputer)
+            {
+                AutoPlay(game.autoPlayer());
+            }
             WinnerName = game.CheckingIfThereIsAWinner(button.Row, button.Col);
             if (WinnerName!="")
             {
@@ -85,6 +91,12 @@ namespace Ex05
         {
 
         }
+        private void AutoPlay(int[] spotInTheBoard)
+        {
+            Controls[spotInTheBoard[0]*boardSize+spotInTheBoard[1]].Text ="O";
+            Controls[spotInTheBoard[0] * boardSize + spotInTheBoard[1]].Enabled = false;
+        }
+
 
         internal void AnnounceWinner(string i_WinnerName)
         {
@@ -115,6 +127,9 @@ namespace Ex05
 
         }
 
+        private void Form1_Load(object sender, EventArgs e)
+        {
 
+        }
     }
 }

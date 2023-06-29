@@ -20,7 +20,7 @@ namespace Ex05
         }
         public bool WhetherTheGameAgainstComputer
         {
-            get { return Player2CheckBox.Checked; }
+            get { return !Player2CheckBox.Checked; }
         }
 
         public int getBoardSizeFromUser

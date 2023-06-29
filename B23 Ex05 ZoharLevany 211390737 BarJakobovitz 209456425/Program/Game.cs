@@ -176,7 +176,7 @@ namespace Ex05
             return winner;
         }
 
-        private int[] autoPlayer()
+        internal int[] autoPlayer()
         {
             int[] spotToReturn = new int[2];
             bool willThisMoveFailMe = true;
